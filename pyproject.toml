@@ -1,5 +1,5 @@
 [tool.flake8]
-ignore = E211, E999, F401, F821, W503
+ignore = E211, E999, F401, F821, W503, E402, F811
 max-doc-length = 72
 
 [tool.black]
