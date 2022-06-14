@@ -1,13 +1,21 @@
-## The task is to predict median house values in Californian districts, given a number of features from these districts.
+<h1> MLE TRAINING </h1>
 
-### Steps to be followed in the Notebook
+<h3> Step 1 </h3>
 
-<ol>
-<li>import a few common modules, ensure MatplotLib plots figures inline also check that Python 3.5 or later is installed as well as Scikit-Learn ≥0.20.
-<li> Download the data from given location
-<li>Use pandas to load the data into notebook after downloading
-<li> Do EDA for analyzing the data
-<li> Create some features which will add some information
-<li>Build basic regression models to predict the continues value
-<li> DO hyper parameter tuning using Grid Search or random Search Cv
-<li> pick the best model
+Install git on your local PC <a>https://git-scm.com/downloads</a>
+
+<h3>Step 2</h3>
+
+Clone the remote repo <br>
+
+![image-2.png](attachment:image-2.png)
+
+<h3>Step 3</h3>
+Create virtual environment and activate it
+
+![image-3.png](attachment:image-3.png)
+
+<h3>Step 4</h3>
+
+Run the code file or work in jupyter notebook
+
