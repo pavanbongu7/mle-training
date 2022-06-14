@@ -5,16 +5,18 @@ import sys
 import warnings
 from urllib.parse import urlparse
 
+import logger
 import mlflow
 import mlflow.sklearn
 import pandas as pd
+from methods import *
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import ElasticNet
 
-import logger
-from methods import *
-
 warnings.filterwarnings("ignore")
+
+# import the data
+import ingest_data
 
 # define the logger
 LOGGER = logger.get_logger(__name__)
@@ -91,7 +93,7 @@ with mlflow.start_run(experiment_id="2") as run:
 
     (rmse, mae, r2) = eval_metrics(test_y, predicted_qualities)
 
-    print("Elasticnet model (n_estimators=%f, max_depth=%f):" % (n_estimators, max_depth))
+    print("Random Forest model (n_estimators=%f, max_depth=%f):" % (n_estimators, max_depth))
     print("  RMSE: %s" % rmse)
     print("  MAE: %s" % mae)
     print("  R2: %s" % r2)
