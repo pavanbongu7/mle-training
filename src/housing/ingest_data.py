@@ -7,7 +7,7 @@ import pandas as pd
 import requests
 from sklearn.model_selection import train_test_split
 
-from config import *
+from housing.config import *
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--path", help="Path to store the data files", default=DEFAULT_HOUSING_PATH)

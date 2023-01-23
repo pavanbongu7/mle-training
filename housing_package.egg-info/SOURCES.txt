@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+housing_package.egg-info/PKG-INFO
+housing_package.egg-info/SOURCES.txt
+housing_package.egg-info/dependency_links.txt
+housing_package.egg-info/requires.txt
+housing_package.egg-info/top_level.txt
