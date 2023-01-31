@@ -28,9 +28,15 @@ DEFAULT_HOUSING_TEST_PATH = os.path.join("datasets", "test.csv")
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
-    "--train_path", help="Path to training data", default=DEFAULT_HOUSING_TRAIN_PATH
+    "--train_path",
+    help="Path to training data",
+    default=DEFAULT_HOUSING_TRAIN_PATH,
 )
-parser.add_argument("--test_path", help="Path to testing data", default=DEFAULT_HOUSING_TEST_PATH)
+parser.add_argument(
+    "--test_path",
+    help="Path to testing data",
+    default=DEFAULT_HOUSING_TEST_PATH,
+)
 
 args = parser.parse_args()
 
@@ -76,7 +82,9 @@ with mlflow.start_run(experiment_id="1") as run:
 
     # Model registry does not work with file store
     if tracking_url_type_store != "file":
-        mlflow.sklearn.log_model(lr, "model", registered_model_name="ElasticnetWineModel")
+        mlflow.sklearn.log_model(
+            lr, "model", registered_model_name="ElasticnetWineModel"
+        )
     else:
         mlflow.sklearn.log_model(lr, "model")
 
@@ -93,7 +101,10 @@ with mlflow.start_run(experiment_id="2") as run:
 
     (rmse, mae, r2) = eval_metrics(test_y, predicted_qualities)
 
-    print("Random Forest model (n_estimators=%f, max_depth=%f):" % (n_estimators, max_depth))
+    print(
+        "Random Forest model (n_estimators=%f, max_depth=%f):"
+        % (n_estimators, max_depth)
+    )
     print("  RMSE: %s" % rmse)
     print("  MAE: %s" % mae)
     print("  R2: %s" % r2)
@@ -108,6 +119,8 @@ with mlflow.start_run(experiment_id="2") as run:
 
     # Model registry does not work with file store
     if tracking_url_type_store != "file":
-        mlflow.sklearn.log_model(lr, "model", registered_model_name="RandomForestModel")
+        mlflow.sklearn.log_model(
+            lr, "model", registered_model_name="RandomForestModel"
+        )
     else:
         mlflow.sklearn.log_model(lr, "model")

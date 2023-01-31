@@ -7,4 +7,4 @@ DEFAULT_HOUSING_PATH = "datasets"
 HOUSING_URL = DATA_DOWNLOAD_ROOT + "datasets/housing/housing.tgz"
 
 
-LOGS_PATH = 'logs/logs.txt'
+LOGS_PATH = "logs/logs.txt"
