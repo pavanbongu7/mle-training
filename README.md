@@ -32,11 +32,10 @@ The dot(.) here denotes the current folder
 or 
 ```
 pip install housing_package
-
-## Run the we app
+```
+## Run the web app
 Open the terminal
 ```
 python flask_app/app.py
 ```
 
-```
