@@ -1,3 +1,4 @@
+
 # Guid for Housing-Project
 
 ## Cloning the Repository
@@ -28,3 +29,7 @@ pip install .
 
 ```
 The dot(.) here denotes the current folder
+or 
+```
+pip install housing_package
+```
