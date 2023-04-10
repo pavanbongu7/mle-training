@@ -1,2 +1,5 @@
-2022-06-14 15:00:02 - train.py - <module> - 53 - INFO - Elastic Net Training Started
-2022-06-14 15:00:08 - train.py - <module> - 85 - INFO - Random Forest Training Started
+2023-04-10 23:48:48 - train.py - <module> - 63 - INFO - Elastic Net Training Started with 
+    Exp ID : 1 | Exp name : linear_regression
+2023-04-10 23:48:51 - train.py - <module> - 102 - INFO - Random Forest Training Started with 
+    Exp ID : 2 | Exp name : random_forest_regression
+2023-04-10 23:48:51 - train.py - <module> - 104 - INFO - Random Forest Training Started

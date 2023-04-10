@@ -1,6 +1,0 @@
-def test_example():
-    try:
-        import housing
-    except ImportError:
-        housing = None
-    assert 'housing' not in locals()

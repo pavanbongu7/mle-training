@@ -1,0 +1,15 @@
+artifact_uri: file:///root/taml_project/mle-training/mlruns/2/28a3f9d298cd4afb994738a3445abded/artifacts
+end_time: 1681147916947
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+name: ''
+run_id: 28a3f9d298cd4afb994738a3445abded
+run_uuid: 28a3f9d298cd4afb994738a3445abded
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1681147913410
+status: 3
+tags: []
+user_id: root

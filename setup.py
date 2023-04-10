@@ -1,0 +1,7 @@
+from setuptools import setup
+
+setup()
+
+
+#token
+# pypi-AgEIcHlwaS5vcmcCJDBhMTliMTgzLTIxOGEtNDRiOC05NzhlLWU4NDU1NzhiOGY3NQACKlszLCJjZTI1MjYzZi03NjgyLTQ0Y2MtYWNiMy1iNjU4NTQ3ZjY1NGIiXQAABiAz8PGswGTR5xdBnzUOL17tuRFC9z3AXklXIIYonzO-yw
