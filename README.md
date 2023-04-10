@@ -14,7 +14,7 @@ To set up the environment, you will need to have conda installed on your machine
 
 Once conda is installed, you can create the environment by running the following command:
 ```
-conda env create -f env.yml
+conda create -n <env_name> python==3.7
 ```
 This command will create an environment based on the specifications in the env.yml file.
 
