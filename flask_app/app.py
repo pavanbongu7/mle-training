@@ -1,15 +1,14 @@
 import pickle
 
-import mlflow.sklearn
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-# Load the trained model
-# Load the model artifact
-best_run_id = "ede37f64711845258936830791646d75"
-model_path = f"runs:/{best_run_id}/model"
-model = mlflow.sklearn.load_model(model_path)
+
+# Load the model from disk
+with open('flask_app/model.pkl', 'rb') as f:
+    model = pickle.load(f)
+
 
 # Define the home page
 @app.route('/')
@@ -68,4 +67,4 @@ def predict():
     return render_template('prediction.html', predicted_value=str(round(prediction[0], 2)))
 
 if __name__ == '__main__':
-    app.run(debug=True,host='0.0.0.0')
+    app.run(debug=True,host='0.0.0.0',port=5000)
