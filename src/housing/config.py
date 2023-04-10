@@ -2,7 +2,7 @@
 
 import os
 
-DATA_DOWNLOAD_ROOT = "https://raw.githubusercontent.com/ageron/handson-ml/master/"
+DATA_DOWNLOAD_ROOT = "https://github.com/ageron/handson-ml/master/"
 DEFAULT_HOUSING_PATH = "datasets"
 HOUSING_URL = DATA_DOWNLOAD_ROOT + "datasets/housing/housing.tgz"
 

@@ -7,4 +7,5 @@
         "-rc",
         "--atomic"
     ],
+    "liveServer.settings.port": 5501,
 }
