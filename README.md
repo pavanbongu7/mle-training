@@ -25,5 +25,6 @@ conda activate mle-dev
 To install the package, you can use the following command:
 ```
 pip install .
-pip install housing_package
+
 ```
+The dot(.) here denotes the current folder
