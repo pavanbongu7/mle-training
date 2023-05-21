@@ -1,9 +1,7 @@
 """ This module is for traing the data"""
 import argparse
-import os
 import sys
 import warnings
-from urllib.parse import urlparse
 
 import mlflow
 import mlflow.sklearn
@@ -14,7 +12,7 @@ from sklearn.model_selection import train_test_split
 
 from pavan_housing import logger
 from pavan_housing.config import DEFAULT_HOUSING_TRAIN_PATH
-from pavan_housing.methods import *
+from pavan_housing.methods import eval_metrics, preprocess
 
 warnings.filterwarnings("ignore")
 
@@ -59,9 +57,11 @@ else:
     experiment_id_lr = experiment_lr.experiment_id
     print(f"Using existing experiment with ID: {experiment_id_lr}")
 
-with mlflow.start_run(experiment_id = experiment_id_lr) as run:
-    LOGGER.info(f'''Elastic Net Training Started with 
-    Exp ID : {experiment_id_lr} | Exp name : {experiment_name_lr}''')
+with mlflow.start_run(experiment_id=experiment_id_lr) as run:
+    LOGGER.info(
+        f"""Elastic Net Training Started with
+    Exp ID : {experiment_id_lr} | Exp name : {experiment_name_lr}"""
+    )
     #  Model1 -- Elastic Net
     alpha = float(sys.argv[1]) if len(sys.argv) > 1 else 0.5
     l1_ratio = float(sys.argv[2]) if len(sys.argv) > 2 else 0.5
@@ -83,9 +83,7 @@ with mlflow.start_run(experiment_id = experiment_id_lr) as run:
     mlflow.log_metric("r2", r2)
     mlflow.log_metric("mae", mae)
 
-
     mlflow.sklearn.log_model(lr, "model")
-
 
 
 experiment_name_rf = "random_forest_regression"
@@ -98,9 +96,11 @@ else:
     experiment_id_rf = experiment_rf.experiment_id
     print(f"Using existing experiment with ID: {experiment_id_rf}")
 
-with mlflow.start_run(experiment_id =experiment_id_rf ) as run:
-    LOGGER.info(f'''Random Forest Training Started with 
-    Exp ID : {experiment_id_rf} | Exp name : {experiment_name_rf}''')
+with mlflow.start_run(experiment_id=experiment_id_rf) as run:
+    LOGGER.info(
+        f"""Random Forest Training Started with
+    Exp ID : {experiment_id_rf} | Exp name : {experiment_name_rf}"""
+    )
     LOGGER.info("Random Forest Training Started")
     #  Model1 -- Elastic Net
     n_estimators = 100
@@ -112,10 +112,7 @@ with mlflow.start_run(experiment_id =experiment_id_rf ) as run:
 
     (rmse, mae, r2) = eval_metrics(val_y, predicted_qualities)
 
-    print(
-        "Random Forest model (n_estimators=%f, max_depth=%f):"
-        % (n_estimators, max_depth)
-    )
+    print("Random Forest model (n_estimators=%f, max_depth=%f):" % (n_estimators, max_depth))
     print("  RMSE: %s" % rmse)
     print("  MAE: %s" % mae)
     print("  R2: %s" % r2)

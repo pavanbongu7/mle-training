@@ -5,7 +5,8 @@ from pavan_housing.config import LOGS_PATH
 
 def get_logger(logger_name):
     """
-    get_logger : Generate logger object which will log the events in the module during the runtime
+    get_logger : Generate logger object which will log
+    the events in the module during the runtime
 
     Arguments:
         logger_name {str} -- Name of the process
@@ -20,7 +21,8 @@ def get_logger(logger_name):
     f_handler = logging.FileHandler(filename=LOGS_PATH, mode="w")
     # string format of the text to put in the log file
     f_format = logging.Formatter(
-        "%(asctime)s - %(filename)s - %(funcName)s - %(lineno)d - %(levelname)s - %(message)s",
+        """%(asctime)s - %(filename)s - %(funcName)s - %(lineno)d
+        - %(levelname)s - %(message)s""",
         datefmt="%Y-%m-%d %H:%M:%S",
     )
     # assign the string format and file handler to the logger object

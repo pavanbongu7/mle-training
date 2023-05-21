@@ -30,5 +30,5 @@ test_data = pd.read_csv(HOUSING_TEST_PATH)
 test_x, test_y = preprocess(test_data)
 y_predict_test = model.predict(test_x)
 
-score = r2_score(test_y,y_predict_test)
-print('R2 score :',score)
+score = r2_score(test_y, y_predict_test)
+print("R2 score :", score)
