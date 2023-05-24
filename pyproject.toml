@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pavan_housing"
-version = "0.2"
+version = "0.1"
 authors = [
   { name="Pavan Bongu", email="pavan.bongu@tigeranalytics.com" },
 ]
@@ -21,7 +21,7 @@ classifiers = [
 "Homepage" = "https://github.com/pavanbongu7/mle-training"
 
 [tool.black]
-line-length = 79
+line-length = 100
 target-version = ['py39']
 
 [tool.isort]
@@ -30,5 +30,5 @@ multi_line_output = 3
 py_version = 39
 
 [tool.flake8]
-
-max-doc-length = 72
+max-doc-length = 100
+max-line-length = 100

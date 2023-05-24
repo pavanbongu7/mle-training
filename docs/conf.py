@@ -13,18 +13,14 @@
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("."))
-sys.path.append("../housing/")
+sys.path.insert(0, os.path.abspath(".."))
 
 
 # -- Project information -----------------------------------------------------
 
-project = "House Price Prediction"
-copyright = "2022, Pavan"
-author = "Pavan"
-
-# The full version, including alpha/beta/rc tags
-release = "v2.1"
+project = "pavan-housing"
+copyright = "2023, pavan.bongu"
+author = "pavan.bongu"
 
 
 # -- General configuration ---------------------------------------------------
@@ -32,14 +28,7 @@ release = "v2.1"
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [
-    "sphinx.ext.autodoc",
-    "sphinx.ext.doctest",
-    "sphinx.ext.intersphinx",
-    "sphinx.ext.todo",
-    "sphinx.ext.mathjax",
-    "sphinx.ext.napoleon",
-]
+extensions = ["sphinx.ext.autodoc", "sphinx.ext.viewcode", "sphinx.ext.napoleon"]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
@@ -56,7 +45,6 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 # a list of builtin themes.
 #
 html_theme = "sphinx_rtd_theme"
-
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".

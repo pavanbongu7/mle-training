@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: pavan-housing
-Version: 0.2
+Version: 0.5
 Summary: 'A housing package to predict the price of houses in california'
 Author-email: Pavan Bongu <pavan.bongu@tigeranalytics.com>
 Project-URL: Homepage, https://github.com/pavanbongu7/mle-training
